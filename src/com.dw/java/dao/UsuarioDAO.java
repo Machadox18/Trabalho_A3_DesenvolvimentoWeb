@@ -52,6 +52,20 @@ public class UsuarioDAO {
         return u; // retorna null se login falhar
     }
 
+    public void atualizarPerfil(Usuario u) {
+        String sql = "UPDATE usuario SET nome=?, dieta=?, bio=? WHERE id=?";
 
+        try (Connection con = Conexao.getConnection();
+             PreparedStatement stmt = con.prepareStatement(sql)) {
 
+            stmt.setString(1, u.getNome());
+            stmt.setString(2, u.getDieta());
+            stmt.setString(3, u.getBio());
+            stmt.setInt(4, u.getId());
+
+            stmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
