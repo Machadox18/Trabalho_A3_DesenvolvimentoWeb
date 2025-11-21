@@ -61,6 +61,36 @@ public class IngredienteDAO {
         return lista;
     }
 
+    public void atualizar(Ingrediente i) {
+        String sql = "UPDATE ingrediente SET nome=?, categoria=?, quantidade=?, unidade=?, validade=? WHERE id=?";
 
+        try (Connection con = Conexao.getConnection();
+             PreparedStatement stmt = con.prepareStatement(sql)) {
 
+            stmt.setString(1, i.getNome());
+            stmt.setString(2, i.getCategoria());
+            stmt.setDouble(3, i.getQuantidade());
+            stmt.setString(4, i.getUnidade());
+            stmt.setString(5, i.getValidade());
+            stmt.setInt(6, i.getId());
+
+            stmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void excluir(int id) {
+        String sql = "DELETE FROM ingrediente WHERE id = ?";
+
+        try (Connection con = Conexao.getConnection();
+             PreparedStatement stmt = con.prepareStatement(sql)) {
+
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
