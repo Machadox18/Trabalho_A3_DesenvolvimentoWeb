@@ -4,6 +4,9 @@ import model.Usuario;
 import util.Conexao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UsuarioDAO {
     public void cadastrar(Usuario u) {
@@ -68,4 +71,60 @@ public class UsuarioDAO {
             e.printStackTrace();
         }
     }
+
+    public List<Usuario> listarTodos() {
+        List<Usuario> lista = new ArrayList<>();
+
+        String sql = "SELECT * FROM usuario";
+
+        try (Connection con = Conexao.getConnection();
+             PreparedStatement stmt = con.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+
+            while (rs.next()) {
+                Usuario u = new Usuario();
+                u.setId(rs.getInt("id"));
+                u.setNome(rs.getString("nome"));
+                u.setEmail(rs.getString("email"));
+                u.setSenha(rs.getString("senha"));
+                u.setDieta(rs.getString("dieta"));
+                u.setBio(rs.getString("bio"));
+
+                lista.add(u);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return lista;
+    }
+
+    public Usuario buscarPorId(int id) {
+        String sql = "SELECT * FROM usuario WHERE id = ?";
+        Usuario u = null;
+
+        try (Connection con = Conexao.getConnection();
+             PreparedStatement stmt = con.prepareStatement(sql)) {
+
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                u = new Usuario();
+                u.setId(rs.getInt("id"));
+                u.setNome(rs.getString("nome"));
+                u.setEmail(rs.getString("email"));
+                u.setSenha(rs.getString("senha"));
+                u.setDieta(rs.getString("dieta"));
+                u.setBio(rs.getString("bio"));
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return u;
+    }
+
 }

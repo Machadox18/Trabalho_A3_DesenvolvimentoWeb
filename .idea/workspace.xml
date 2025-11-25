@@ -9,20 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e2bec98-0849-46cc-86b7-f4674a71f0ef" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com.dw/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com.dw/java/dao/IngredienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/IngredienteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com.dw/java/dao/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com.dw/java/model/Ingrediente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Ingrediente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com.dw/java/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com.dw/java/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com.dw/java/service/ReceitaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ReceitaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com.dw/java/util/Conexao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Conexao.java" afterDir="false" />
+    <list default="true" id="2e2bec98-0849-46cc-86b7-f4674a71f0ef" name="Changes" comment="feat: implementa o Servlet">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.dw/controller/UsuarioServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.dw/controller/UsuarioServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +82,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 11.0.14" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 11.0.14" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Trabalho_A3_DesenvolvimentoWeb_war_exploded/teste" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Trabalho_A3_DesenvolvimentoWeb_war_exploded/usuario" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Trabalho_A3_DesenvolvimentoWeb:war exploded">
@@ -198,11 +189,25 @@
       <workItem from="1764003216787" duration="349000" />
       <workItem from="1764003898475" duration="179000" />
       <workItem from="1764004443706" duration="1258000" />
-      <workItem from="1764005794871" duration="1332000" />
+      <workItem from="1764005794871" duration="1508000" />
+      <workItem from="1764103717533" duration="429000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: implementa o Servlet">
+      <option name="closed" value="true" />
+      <created>1764008587114</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764008587114</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: implementa o Servlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implementa o Servlet" />
   </component>
 </project>
