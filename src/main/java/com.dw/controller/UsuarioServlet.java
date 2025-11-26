@@ -16,6 +16,13 @@ public class UsuarioServlet extends HttpServlet {
     private UsuarioDAO usuarioDAO = new UsuarioDAO();
     private Gson gson = new Gson();
 
+
+    private void liberarCors(HttpServletResponse resp) {
+        resp.setHeader("Access-Control-Allow-Origin", "*");
+        resp.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        resp.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    }
+
     // --- Método para ler JSON do corpo da requisição ---
     private String lerJson(HttpServletRequest req) throws IOException {
         StringBuilder sb = new StringBuilder();
@@ -33,6 +40,8 @@ public class UsuarioServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
+
+        liberarCors(resp);
 
         String path = req.getPathInfo(); // /cadastro ou /login
         resp.setContentType("application/json");
@@ -71,6 +80,7 @@ public class UsuarioServlet extends HttpServlet {
     protected void doPut(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
 
+        liberarCors(resp);
         String path = req.getPathInfo();
 
         if ("/atualizar".equals(path)) {
@@ -87,6 +97,8 @@ public class UsuarioServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
+
+        liberarCors(resp);
 
         resp.setContentType("application/json");
         String path = req.getPathInfo(); // /teste, /listar, /1 etc.
@@ -122,4 +134,11 @@ public class UsuarioServlet extends HttpServlet {
         resp.setStatus(404);
         resp.getWriter().write("{\"erro\":\"Endpoint GET inválido\"}");
     }
+
+    @Override
+    protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        liberarCors(resp);
+    }
+
+
 }

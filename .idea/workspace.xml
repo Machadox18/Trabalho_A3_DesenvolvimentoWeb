@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e2bec98-0849-46cc-86b7-f4674a71f0ef" name="Changes" comment="feat: implementa o Servlet">
+    <list default="true" id="2e2bec98-0849-46cc-86b7-f4674a71f0ef" name="Changes" comment="feat: implementa os métodos restantes do UsuarioServlet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com.dw/controller/UsuarioServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.dw/controller/UsuarioServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.18850575&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
@@ -190,7 +188,10 @@
       <workItem from="1764003898475" duration="179000" />
       <workItem from="1764004443706" duration="1258000" />
       <workItem from="1764005794871" duration="1508000" />
-      <workItem from="1764103717533" duration="429000" />
+      <workItem from="1764103717533" duration="556000" />
+      <workItem from="1764105426521" duration="144000" />
+      <workItem from="1764182710038" duration="1029000" />
+      <workItem from="1764189394898" duration="2248000" />
     </task>
     <task id="LOCAL-00001" summary="feat: implementa o Servlet">
       <option name="closed" value="true" />
@@ -200,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764008587114</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: implementa os métodos restantes do UsuarioServlet">
+      <option name="closed" value="true" />
+      <created>1764104219459</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764104219459</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +217,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: implementa o Servlet" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implementa o Servlet" />
+    <MESSAGE value="feat: implementa os métodos restantes do UsuarioServlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implementa os métodos restantes do UsuarioServlet" />
   </component>
 </project>
